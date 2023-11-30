@@ -9,11 +9,11 @@ print("LOCKED")
 i = 0
 while True:
     try:
-        pyautogui.hotkey("win", "pgdn")
-        pyautogui.moveTo(scr[0]/2, scr[1]/2)
-        sleep(1/50)
         if keyboard.is_pressed('ctrl') and keyboard.is_pressed('shift') and keyboard.is_pressed('h'):
             print("UNLOCKED")
             exit()
+        pyautogui.moveTo(scr[0]/2, scr[1]/2)
+        pyautogui.hotkey("win", "pgdn")
+        sleep(1/50)
     except KeyboardInterrupt:
         continue
